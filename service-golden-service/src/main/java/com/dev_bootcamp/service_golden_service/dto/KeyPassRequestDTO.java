@@ -16,4 +16,6 @@ public class KeyPassRequestDTO {
     private String keyPass;
     private Boolean activeKey;
 
+
+
 }
