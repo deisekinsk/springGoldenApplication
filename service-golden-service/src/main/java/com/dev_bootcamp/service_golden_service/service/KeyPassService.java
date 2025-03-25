@@ -18,6 +18,7 @@ public class KeyPassService {
     public KeyPassResponseDTO createKeyPass(final KeyPassRequestDTO keyPassRequestDTO) {
 
         KeyPass keyPass = KeyPass.builder()
+
                 //.keypass(keyPassRequestDTO.getKeyPass())
                 .build();
 
