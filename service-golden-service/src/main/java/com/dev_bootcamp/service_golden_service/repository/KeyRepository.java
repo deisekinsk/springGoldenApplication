@@ -12,6 +12,7 @@ public interface KeyRepository extends JpaRepository<KeyPass, UUID> {
 
 
     boolean existByKeyPass(final String keyPass);
+
     Optional<KeyPass> findByKeyPass(final String gotKeyPass);
 
 

@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ServiceGoldenServiceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ServiceGoldenServiceApplication.class, args);
 	}
 
