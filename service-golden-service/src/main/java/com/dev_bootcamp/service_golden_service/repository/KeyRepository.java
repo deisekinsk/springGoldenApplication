@@ -11,7 +11,7 @@ import java.util.UUID;
 public interface KeyRepository extends JpaRepository<KeyPass, UUID> {
 
 
-    boolean existByKeyPass(final String keyPass);
+    boolean existsByKeyPass(final String keyPass);
 
     Optional<KeyPass> findByKeyPass(final String gotKeyPass);
 

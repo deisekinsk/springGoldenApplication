@@ -20,7 +20,7 @@ public class KeyPassService {
     @Transactional
     public KeyPassResponseDTO createKeyPass(final KeyPassRequestDTO keyPassRequestDTO) {
 
-        if(keyRepository.existByKeyPass(keyPassRequestDTO.getKeyPass())){
+        if(keyRepository.existsByKeyPass(keyPassRequestDTO.getKeyPass())){
             throw new KeyPassDuplicatedException(
               String.format("The key is: %s exist!", keyPassRequestDTO.getKeyPass())
             );
