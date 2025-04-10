@@ -2,7 +2,6 @@ package com.dev_bootcamp.service_golden_service.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.UUID;
 
 @Builder

@@ -1,0 +1,4 @@
+2025-04-01 15:49:42.050641-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUA_TABELA" not found; SQL statement:
+INSERT INTO sua_tabela (id, key_pass, active_key)  
+VALUES (RANDOM_UUID(), 'minhaSenhaSegura', TRUE) [42102-232]
