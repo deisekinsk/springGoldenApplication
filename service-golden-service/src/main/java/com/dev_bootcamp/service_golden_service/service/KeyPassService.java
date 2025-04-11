@@ -26,6 +26,11 @@ public class KeyPassService {
             );
         }
 
+        KeyPass keyPass = new KeyPass();
+        keyPass.setKeyPass(keyPassRequestDTO.getKeyPass());
+        keyPass.setActiveKey(keyPassRequestDTO.getActiveKey());
+
+        KeyPass saved = keyRepository.save(keyPass);
 
         return KeyPassResponseDTO.builder()
                 .keyPass(keyPassRequestDTO.getKeyPass())

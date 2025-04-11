@@ -1,5 +1,10 @@
 Read me
 ![Captura de tela 2025-04-01 155336](https://github.com/user-attachments/assets/56c0a69e-fdd4-4035-ae1c-1b8052798266)
+Spring and H2 database run.
+
+.
+![img.png](img.png)
+Postman - Post Method
 # springGoldenApplication DOC.
 
 This repository is part of my learning path in the Java bootcamp. It features a Spring Boot application that demonstrates key components of the Spring ecosystem, with a focus on building RESTful APIs and architecture using MVC.
@@ -21,31 +26,31 @@ This repository is part of my learning path in the Java bootcamp. It features a 
 
 ## Overview
 
-| Technologies Used  ↓    |                          | Topics Covered  ↓                            |
-|-------------------------|--------------------------|---------------------------------------------|
-| Java 23                 |                          | REST API development with Spring Boot       |
-| Spring Framework        |                          | Layered architecture using MVC              |
-| Spring Boot             |                          | Dependency management via `pom.xml`         |
-| Spring Data JPA         |                          | Application build and execution with `mvn`  |
-| Maven (mvn)             |                          | JPA entity modeling                         |
-| H2 Database (in-memory) |                          | Custom exception handling                   |
-| IntelliJ IDE            |                          | DTO usage for data abstraction              |
+| Technologies Used  ↓    |                          | Topics Covered  ↓                           |
+|-------------------------|--------------------------|--------------------------------------------|
+| Java 23                 |                          | REST API development with Spring Boot      |
+| Spring Framework        |                          | Layered architecture using MVC             |
+| Spring Boot             |                          | Dependency management via `pom.xml`        |
+| Spring Data JPA         |                          | Application build and execution with `mvn  |
+| Maven (mvn)             |                          | JPA entity modeling                        |
+| H2 Database (in-memory) |                          | Custom exception handling                  |
+| IntelliJ IDE            |                          | DTO usage for data abstraction             |
 |                         |                          | Centralized configuration (`configuration`) |
 
 ---
 
 ## Project Structure
 
-| Package / File            | Responsibility                                                         |
-|---------------------------|------------------------------------------------------------------------|
-| `configuration`           | Centralized configuration setup for the application                   |
-| `controller`              | Defines REST endpoints and maps HTTP requests to service methods      |
-| `dto`                     | Data Transfer Objects to carry data between layers                    |
-| `exception`               | Custom exception classes and global error handling                    |
-| `model`                   | Domain entities mapped to database tables using JPA                   |
-| `repository`              | Interfaces for data persistence using Spring Data JPA                 |
-| `service`                 | Contains business logic and handles operations called by controllers |
-| `application.java`        | Entry point of the application annotated with `@SpringBootApplication`|
+| Package / File            | Responsibility                                                                           |
+|---------------------------|------------------------------------------------------------------------------------------|
+| `configuration`           | Centralized configuration setup for the application                                      |
+| `controller`              | Defines REST endpoints and maps HTTP requests to service methods                         |
+| `dto`                     | Data Transfer Objects to carry data between layers. It's not the same entities of Model. |
+| `exception`               | Custom exception classes and global error handling                                       |
+| `model`                   | Domain entities mapped to database tables using JPA                                      |
+| `repository`              | Interfaces for data persistence using Spring Data JPA                                    |
+| `service`                 | Contains business logic and handles operations called by controllers                     |
+| `application.java`        | Entry point of the application annotated with `@SpringBootApplication`                   |
 
 ---
 
@@ -120,9 +125,9 @@ It also specifies the Java version (`23`) and handles project packaging and buil
 
 Common commands:
 
-- `mvn clean` – Deletes previous build artifacts
-- `mvn install` – Compiles and packages the app locally
-- `mvn spring-boot:run` – Launches the Spring Boot application
+- `mvn clean – Deletes previous build artifacts
+- `mvn install – Compiles and packages the app locally
+- `mvn spring-boot:run – Launches the Spring Boot application
 
 ---
 
