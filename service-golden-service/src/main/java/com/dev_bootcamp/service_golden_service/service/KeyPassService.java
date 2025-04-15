@@ -10,6 +10,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 @RequiredArgsConstructor
 public class KeyPassService {
@@ -52,4 +55,16 @@ public class KeyPassService {
                 .activeKey(keyPass.getActiveKey())
                 .build();
 
-}}
+}
+
+
+    public List<KeyPassResponseDTO> getAllKeypass() {
+        return keyRepository.findAll().stream()
+                .map(keyPass -> KeyPassResponseDTO.builder()
+                        .keyPass(keyPass.getKeyPass())
+                        .activeKey(keyPass.getActiveKey())
+                        .build())
+                .collect(Collectors.toList());
+    }
+
+}

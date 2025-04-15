@@ -7,7 +7,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.OK;
 
 @RequestMapping("/api/golden/keypass")
 @RestController
@@ -32,5 +35,11 @@ public class KeyPassController {
                 keyPassService.findKeyPass(
                 keyPass
         ));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<KeyPassResponseDTO>> getAllKeypass(){
+        return ResponseEntity.status(OK).body(
+                keyPassService.getAllKeypass());
     }
 }
