@@ -64,6 +64,26 @@ This repository is part of my learning path in the Java bootcamp. It features a 
 | Service     | Implements business logic and application workflows                      | `UserService.java`          |
 | Repository  | Performs database operations via Spring Data JPA                         | `UserRepository.java`       |
 
+```
+```JSON
+keyPassRequestDTO = {
+    keyPass: "1234-ABCD",
+    activeKey: true
+}
+
+| Step | Variable / Action        | Value                                                        |
+|------|--------------------------|---------------------------------------------------------------|
+| 1    | Create KeyPass instance  | keyPass = new KeyPass()                                      |
+| 2    | Set keyPass field        | keyPass.setKeyPass("1234-ABCD")                              |
+| 3    | Set activeKey field      | keyPass.setActiveKey(true)                                   |
+| 4    | Save to repository       | saved = keyRepository.save(keyPass)                          |
+| 5    | Create response DTO      | KeyPassResponseDTO(keyPass="1234-ABCD", activeKey=true)      |
+| 6    | Return DTO               | Returned to the Controller layer                             |
+```
+
+
+
+
 ---
 
 ## Common Annotations
