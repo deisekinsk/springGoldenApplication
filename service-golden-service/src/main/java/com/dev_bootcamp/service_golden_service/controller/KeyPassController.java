@@ -31,7 +31,7 @@ public class KeyPassController {
     @GetMapping("/{keyPass}")
     public ResponseEntity<KeyPassResponseDTO> findKeyPass(
             @PathVariable String keyPass){
-        return ResponseEntity.status(CREATED).body(
+        return ResponseEntity.status(OK).body(
                 keyPassService.findKeyPass(
                 keyPass
         ));
