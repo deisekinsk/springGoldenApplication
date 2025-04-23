@@ -27,7 +27,7 @@ public class KeyPassService {
         //create and post the exception if the object no exist.
         if(keyRepository.existsByKeyPass(keyPassRequestDTO.getKeyPass())){
             throw new KeyPassDuplicatedException(
-              String.format("The key is: %s exist!", keyPassRequestDTO.getKeyPass())
+              String.format("The key %s exist!", keyPassRequestDTO.getKeyPass())
             );
         }
 
@@ -51,7 +51,7 @@ public class KeyPassService {
 
         KeyPass keyPass = keyRepository.findByKeyPass(searchedKeyPass).orElseThrow(
                 () -> new KeyPassNotFoundException(
-                        String.format("The key: %s is not found.", searchedKeyPass)
+                        String.format("The key %s is not found.", searchedKeyPass)
                 ));
 
         return KeyPassResponseDTO.builder()
@@ -75,7 +75,7 @@ public class KeyPassService {
 
         KeyPass keyPass = keyRepository.findByKeyPass(updateKeyPass).orElseThrow(
                 () -> new KeyPassNotFoundException(
-                        String.format("THe key: %s is not found.", updateKeyPass)
+                        String.format("THe key %s is not found.", updateKeyPass)
                 ));
 
         keyPass.setKeyPass(keyPassRequestDTO.getKeyPass());

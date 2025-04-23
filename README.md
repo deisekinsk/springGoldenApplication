@@ -88,20 +88,21 @@ keyPassRequestDTO = {
 
 ## Common Annotations
 
-| Annotation              | Description                                                                  |
-|-------------------------|-------------------------------------------------------------------------------|
+| Annotation | Description                                                                  |
+|-----------|-------------------------------------------------------------------------------|
 | `@SpringBootApplication`| Marks the main class and enables Spring Boot auto-configuration              |
-| `@RestController`       | Declares a class as a REST controller                                        |
-| `@RequestMapping`       | Maps HTTP paths to classes or methods                                        |
+| `@RestController` | Declares a class as a REST controller                                        |
+| `@RequestMapping` | Maps HTTP paths to classes or methods                                        |
 | `@GetMapping` / `@PostMapping` | Maps specific HTTP methods to controller methods                     |
-| `@Autowired`            | Injects required dependencies                                                |
-| `@Entity`               | Declares a class as a JPA entity                                             |
-| `@Id`                   | Marks a field as the primary key of an entity                                |
-| `@GeneratedValue`       | Specifies the strategy for primary key generation                            |
-| `@Repository`           | Declares a persistence interface managed by Spring                           |
-| `@Service`              | Marks a service class that contains business logic                           |
-| `@ExceptionHandler`     | Handles exceptions in a controller context                                   |
-| `@Configuration`        | Indicates a class contains Spring bean definitions                           |
+| `@Autowired` | Injects required dependencies                                                |
+| `@Entity` | Declares a class as a JPA entity                                             |
+| `@Id`     | Marks a field as the primary key of an entity                                |
+| `@GeneratedValue` | Specifies the strategy for primary key generation                            |
+| `@Repository` | Declares a persistence interface managed by Spring                           |
+| `@Service` | Marks a service class that contains business logic                           |
+| `@ExceptionHandler` | Handles exceptions in a controller context                                   |
+| `@Configuration` | Indicates a class contains Spring bean definitions                           |
+| `@RestControllerAdvice` | Useful for creating consistent error responses across the whole API.                          |
 
 ---
 
