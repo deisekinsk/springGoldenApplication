@@ -10,10 +10,9 @@ import java.util.UUID;
 @Repository
 public interface KeyRepository extends JpaRepository<KeyPass, UUID> {
 
+    Optional<KeyPass> findByKeyPass(final String gotKeyPass);
 
     boolean existsByKeyPass(final String keyPass);
 
-    Optional<KeyPass> findByKeyPass(final String gotKeyPass);
-
-
+    //void deleteByKeyPass(String keyPass);
 }

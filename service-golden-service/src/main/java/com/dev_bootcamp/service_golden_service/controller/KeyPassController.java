@@ -42,4 +42,24 @@ public class KeyPassController {
         return ResponseEntity.status(OK).body(
                 keyPassService.getAllKeypass());
     }
+
+    @PutMapping("/{keyPass}")
+    public ResponseEntity<KeyPassResponseDTO> updateKeyPass(
+            @PathVariable String keyPass,
+            @RequestBody KeyPassRequestDTO keyPassRequestDTO){
+        return ResponseEntity.status(OK).body(
+                keyPassService.updateKeyPass(keyPass, keyPassRequestDTO)
+        );
+    }
+
+    @DeleteMapping("/{keyPass}")
+    public ResponseEntity<Void> deleteKeyPass(
+            @PathVariable String keyPass
+    ){
+        keyPassService.deleteKeyPass(keyPass);
+        return ResponseEntity.noContent().build();
+    }
+
+
+
 }

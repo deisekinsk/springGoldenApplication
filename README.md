@@ -3,8 +3,8 @@ Read me
 Spring and H2 database run.
 
 .
-![img.png](img.png)
-Postman - Post Method
+![img_1.png](img_1.png)
+Postman - CRUD
 # springGoldenApplication DOC.
 
 This repository is part of my learning path in the Java bootcamp. It features a Spring Boot application that demonstrates key components of the Spring ecosystem, with a focus on building RESTful APIs and architecture using MVC.
