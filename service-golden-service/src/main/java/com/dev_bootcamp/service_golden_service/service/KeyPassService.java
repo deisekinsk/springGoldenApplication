@@ -93,7 +93,7 @@ public class KeyPassService {
 
     KeyPass keyPassEntity = keyRepository.findByKeyPass(keyPass)
             .orElseThrow(() -> new KeyPassNotFoundException(
-                    String.format("THe key: %s is not found.", keyPass)
+                    String.format("The key: %s is not found.", keyPass)
             ));
 
 
